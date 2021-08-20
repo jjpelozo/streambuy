@@ -5,14 +5,8 @@ const Settings = ({top}) => {
 
 
     return (
-        <div className="settingsCont" style={{ marginLeft: "50%" , marginTop: top }}>
+        <div className="settingsCont" style={{ marginLeft: "60%" , marginTop: top }}>
           <div className="settingsIcons">
-            <div className="settingsUser">
-            <i className="far fa-user-circle" style={{
-              color: "#707070",
-              fontSize: "2em",
-            }}></i>
-            </div>
             <div className="settingsUser">
             <i className="fas fa-cog" style={{
               color: "#707070",

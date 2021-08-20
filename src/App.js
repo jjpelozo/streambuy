@@ -64,15 +64,15 @@ const App = () => {
   const productsTop = `${window.screen.height - (window.screen.height * 70) / 100}px`;
   const ractionsTop = `${window.screen.height - (window.screen.height * 85) / 100}px`;
   const chatTop = `${window.screen.height - (window.screen.height * 10) / 100}px`;
+  const chatWidth = `${window.screen.width - (window.screen.width * 40) / 100}px`;
   const viewChatTop = `${window.screen.height - (window.screen.height * 37) / 100}px`;
   const featuredProductTop = `${window.screen.height - (window.screen.height * 80) / 100}px`;
+  const viewChatWidth = `${window.screen.width - (window.screen.width * 60) / 100}px`;
   const featuredProductWidth = `${window.screen.width - (window.screen.width * 90) / 100}px`;
   const publisherNameTop = `${window.screen.height - (window.screen.height * 85) / 100}px`;
   const settingsTop = `${window.screen.height - (window.screen.height * 10) / 100}px`;
 
-  console.log(heightPx);
-  console.log(settingsTop);
-  console.log(chatTop);
+ 
   return videoSelect ? (
     <>
       <div style={{ height: heightPx, width: "100%", overflow: "hidden" }}>
@@ -84,7 +84,7 @@ const App = () => {
           top={publisherNameTop}
         />
         {false && <Reactions top={ractionsTop} newReaction={newReaction} />}
-        <Product
+    {/*   <Product
           name="Sandalia Cameron"
           description="Texana combinada en cuero metalizado y cuero liso de color a tono del bordado sobre glitter bajo fondo. Ribete plano en caña y escote, Presilla con SRKNY bordado. Base texana simil folia. Altura de caña 29 cm. Altura de taco 5 cm. Altura de suelin 7 mm."
           price="12.920"
@@ -92,19 +92,19 @@ const App = () => {
           discount="No mojar. No lavar. Evitar fuertes roces ya que se puede desgastar material y color original o dañar los apliques."
           width={widthPx}
           top={productsTop}
-        />
- 
-     {/*    <FeaturedProducts
+        /> 
+  */}
+        <FeaturedProducts
           top={featuredProductTop}
           width={featuredProductWidth}
-        /> */}
+        /> 
 
-        <Chat width={widthPx} top={chatTop} author={user.name} />
+        <Chat width={chatWidth} top={chatTop} author={user.name} />
 
         <Settings top={settingsTop} />
 
         <ViewChat
-          width={widthPx}
+          width={viewChatWidth}
           top={viewChatTop}
           author={user.name}
           pic={user.pic}

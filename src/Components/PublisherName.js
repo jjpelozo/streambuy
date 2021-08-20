@@ -7,8 +7,10 @@ const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState([]);
 
+  const user = author;
+  console.log(user);
   const setLike = async () => {
-    await db.collection("likes").doc(author).set({
+    await db.collection("likes").doc(user).set({
       like: 1,
     });
   };
@@ -22,8 +24,8 @@ const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
       setLikes(docs);
     });
   };
-  const onDeleteLike = async (author) => {
-    await db.collection("likes").doc(author).delete();
+  const onDeleteLike = async (user) => {
+    await db.collection("likes").doc(user).delete();
   };
 
   useEffect(() => {
@@ -31,18 +33,19 @@ const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
   }, []);
 
   const handleLike = () => {
-    console.log("hice click")
-   /*  setLiked(!liked);
+    console.log("hice click");
+    setLiked(!liked);
     if (!liked) {
       setLike();
-
     } else {
-      onDeleteLike(author);
-    } */
+      onDeleteLike(user);
+    }
   };
 
   return (
-    <div className="authCont" style={{marginLeft: "85%", marginTop:top }}>
+    <div className="authCont" style={{ marginLeft: "60%", marginTop: top }}>
+      <div className="authInfo">{author}</div>
+
       <div className="actCont">
         <div className="itemPublisher">
           <i
@@ -52,7 +55,7 @@ const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
               fontSize: "1.4em",
             }}
           />
-         <span> {subscribers}  </span> 
+          <span> {subscribers} </span>
         </div>
         <div className="itemPublisher">
           <i
@@ -63,11 +66,11 @@ const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
               fontSize: "1.4em",
             }}
           />
-        <span> {likes.length}  </span>  
+          <span> {likes.length} </span>
         </div>
         <div className="itemPublisher">
           <i
-            class="fas fa-comment-dots"
+            className="fas fa-comment-dots"
             style={{
               color: "white",
               fontSize: "1.4em",

@@ -42,7 +42,7 @@ const ViewChat = ({ width, top, author, pic }) => {
   return (
     <div className="viewChatCont" style={{ width: width, marginTop: top }}>
       <div className="chatBody">
-        {message.map((message) => (
+        {chats.map((message) => (
           <div className="chatView">
             <p className="">
               <span className="chatName">{message.name}</span>

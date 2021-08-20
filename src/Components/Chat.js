@@ -16,23 +16,14 @@ const Chat = ({ width, top, author }) => {
     });
 
     setInput("");
+    console.log("hiceclick");
   };
 
   return (
-    <div className="chatCont" style={{ marginTop: top }}>
-      <form className="chatMessage">
+    <div className="chatCont" style={{ width: width, marginTop: top }}>
+      <div className="chatMessage ">
         <div className="sendMessage">
-          <div className="chatItem">
-            <i
-              class="fas fa-comment-dots"
-              style={{
-                color: "#FF2D55",
-                fontSize: "2.5em",
-                width: "20%",
-              }}
-            ></i>
-          </div>
-          <div>
+          <form>
             <input
               className="inputChat"
               value={input}
@@ -40,20 +31,20 @@ const Chat = ({ width, top, author }) => {
               type="text"
               placeholder="Escribi algo"
             />
-          <i
-            className="fa fa-paper-plane"
-            style={{
-              color: "white",
-              fontSize: "1.4em",
-            }}
-            onClick={sendMessage}
-          />
-          </div>
-       
-     
+          </form>
+      <div className="" onClick={sendMessage}>
+        <i
+          className="fa fa-paper-plane chatItem "
+          style={{
+            color: "red",
+            fontSize: "2em",
+            height: "60px",
+            width: "60px",
+          }}
+        />
+      </div>
         </div>
-
-      </form>
+      </div>
     </div>
   );
 };

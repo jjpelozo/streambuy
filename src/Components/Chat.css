@@ -1,8 +1,14 @@
 .chatCont {
-  position: fixed;
+/*   border-radius: 25px;
+  background: rgba(61, 61, 61, 0.479);
+  display: flex;
+  position: absolute;
+  z-index: 9999;
+  padding: 10px;
+  margin: 25px; */
   background: transparent;
-  z-index: 3000;
- width: 95%;
+  position: absolute;
+  display: flex;
 }
 
 .inputChat {
@@ -13,21 +19,26 @@
 }
 .chatMessage {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
 .sendMessage {
-  width: 50%;
+  width: 100%;
   background-color:#A5A5A5;
   opacity: 1;
   border-radius: 20px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-left: 10px;
-  margin-right: 2px;
+ padding-right: 10px;
+ 
 }
 .chatItem{
-    display: flex;
-    justify-content: center;
+   height: 60px;
+   width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
