@@ -1,0 +1,36 @@
+.settingsCont {
+  position: fixed;
+  background: transparent;
+  z-index: 3000;
+  width: 90%;
+
+}
+
+.settingsIcons {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+.settingsBag {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settingsUser {
+  background-color: #43424233;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

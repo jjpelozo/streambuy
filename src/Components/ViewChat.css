@@ -1,0 +1,36 @@
+.viewChatCont{
+    border-radius: 25px 25px 0px 0px;
+    position: fixed;
+    height: auto;
+    background: transparent;
+}
+
+.chatName{
+    font-size: 9px;
+    font-weight: 200;
+    color: #FE7463;
+}
+  
+.chatMessage{
+    font-size: 11px;
+    font-weight: 600;
+    color: #F9F9F9;
+}
+
+.chatView {
+    display: flex;
+    align-items: center;
+    height: auto;
+    background: #070707;
+    opacity: 0.71;
+    border-radius: 18px;
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 18px;
+   
+}
+
+.chatBody{
+    width: 100%;
+}

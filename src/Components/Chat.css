@@ -1,0 +1,33 @@
+.chatCont {
+  position: fixed;
+  background: transparent;
+  z-index: 3000;
+ width: 95%;
+}
+
+.inputChat {
+  width: 80% !important;
+  height: 48px !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+.chatMessage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sendMessage {
+  width: 50%;
+  background-color:#A5A5A5;
+  opacity: 1;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 2px;
+}
+.chatItem{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,50 @@
+.authCont{
+    border-radius: 25px;
+    background: rgba(61, 61, 61, 0.479);
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    padding: 10px;
+    margin: 25px;
+}
+
+.authPic {
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.authInfo{
+    font-size: 0.6em;
+    color: white;
+}
+
+.live {
+    background-color: orange;
+    color: white;
+    font-size: 0.8em;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.authDivisor{
+    margin: 0px 20px 0px 15px;
+    height: 30px;
+    width: 2px;
+    background: darkgrey;
+}
+
+.actCont{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30px;
+}
+
+.itemPublisher{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
