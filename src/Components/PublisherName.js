@@ -43,10 +43,8 @@ const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
   };
 
   return (
-    <div className="authCont" style={{ marginLeft: "60%", marginTop: top }}>
-      <div className="authInfo">{author}</div>
-
-      <div className="actCont">
+    <div className="authCont" style={{  marginTop: top }}>
+       <div className="actCont">
         <div className="itemPublisher">
           <i
             className="fas fa-eye"
@@ -57,9 +55,9 @@ const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
           />
           <span> {subscribers} </span>
         </div>
-        <div className="itemPublisher">
+        <div className="itemHeart">
           <i
-            className="fas fa-heart"
+            className="fas fa-heart itemHeart"
             onClick={handleLike}
             style={{
               color: liked ? "red" : "white",
@@ -68,6 +66,7 @@ const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
           />
           <span> {likes.length} </span>
         </div>
+       
         <div className="itemPublisher">
           <i
             className="fas fa-comment-dots"
