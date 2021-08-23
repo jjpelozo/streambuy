@@ -2,16 +2,17 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import { getVideo, getAuthUrl, getToken } from "./api";
 import Vimeo from "@u-wave/react-vimeo";
-import PublisherName from "./Components/PublisherName";
-import Product from "./Components/Product";
+import PublisherName from "./pages/PublisherName/PublisherName";
+import Product from "./pages/Product/Product"
 import Reactions from "./Components/Reactions";
 import VideoSelection from "./Components/VideoSelection";
-import Chat from "./Components/Chat";
-import ViewChat from "./Components/ViewChat";
-import LoadingComponent from "./Components/Loading";
-import NextStream from "./Components/NextStream";
-import FeaturedProducts from "./Components/FeaturedProducts";
+import Chat from "./pages/Chat/Chat"
+import ViewChat from "./pages/ViewChats/ViewChat";
+import LoadingComponent from "./pages/Home/Loading";
+import NextStream from "./pages/NextStream/NextStream";
+import FeaturedProducts from "./pages/FeaturedProducts/FeaturedProducts";
 import Settings from "./Components/Settings";
+import Login from "./pages/Login/Login";
 
 const App = () => {
   const [videoSelect, setVideoSelect] = useState(null);
@@ -42,7 +43,7 @@ const App = () => {
         localStorage.setItem("token", data.response.access_token);
         setToken(data.response.access_token);
       });
-  };
+  }
 
   const authGetter = () =>
     getAuthUrl().then(({ data }) => window.open(`${data.response}`, "_self"));
@@ -61,7 +62,7 @@ const App = () => {
 
   const heightPx = `${window.screen.height}px`;
   const widthPx = `${window.screen.width}px`;
-  const productsTop = `${window.screen.height - (window.screen.height * 70) / 100}px`;
+  const productsTop = `${window.screen.height - (window.screen.height * 55) / 100}px`;
   const ractionsTop = `${window.screen.height - (window.screen.height * 85) / 100}px`;
   const chatTop = `${window.screen.height - (window.screen.height * 10) / 100}px`;
   const chatWidth = `${window.screen.width - (window.screen.width * 40) / 100}px`;
@@ -84,7 +85,7 @@ const App = () => {
           top={publisherNameTop}
         />
         {false && <Reactions top={ractionsTop} newReaction={newReaction} />}
-    {/*   <Product
+       <Product
           name="Sandalia Cameron"
           description="Texana combinada en cuero metalizado y cuero liso de color a tono del bordado sobre glitter bajo fondo. Ribete plano en caña y escote, Presilla con SRKNY bordado. Base texana simil folia. Altura de caña 29 cm. Altura de taco 5 cm. Altura de suelin 7 mm."
           price="12.920"
@@ -93,7 +94,7 @@ const App = () => {
           width={widthPx}
           top={productsTop}
         /> 
-  */}
+ 
         <FeaturedProducts
           top={featuredProductTop}
           width={featuredProductWidth}
@@ -121,8 +122,9 @@ const App = () => {
       </div>
     </>
   ) : (
-    <VideoSelection views={views} setViews={setViews} author={user.name} />
-  );
-};
-
+    <Login/>
+    );
+  };
+  {/* <VideoSelection views={views} setViews={setViews} author={user.name} /> */}
+  
 export default App;

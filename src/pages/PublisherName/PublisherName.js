@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./PublisherName.css";
 
-import { db } from "../firesbase";
+import { db } from "../../firesbase";
 
 const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
   const [liked, setLiked] = useState(false);
@@ -43,7 +43,7 @@ const PublisherName = ({ author, subscribers, top, pic, idVideo }) => {
   };
 
   return (
-    <div className="authCont" style={{  marginTop: top }}>
+    <div className="authCont" style={{ marginLeft:"80%", marginTop: top }}>
        <div className="actCont">
         <div className="itemPublisher">
           <i

@@ -3,8 +3,10 @@
     position: fixed;
     height: 120px;
     background-color: transparent;
+    z-index: 100;
   
 }
+
 .productsList{
     display: flex;
     flex-direction: column;

@@ -9,10 +9,12 @@
   background: transparent;
   position: absolute;
   display: flex;
+  z-index: 9998;
+  
 }
 
 .inputChat {
-  width: 80% !important;
+  width: 100% !important;
   height: 48px !important;
   border: none !important;
   background-color: transparent !important;

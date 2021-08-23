@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ViewChat.css";
-import { db } from "../firesbase";
+import { db } from "../../firesbase";
 
 const ViewChat = ({ width, top, author, pic }) => {
   const [chats, setChats] = useState([]);
@@ -13,7 +13,7 @@ const ViewChat = ({ width, top, author, pic }) => {
         querySnapshot.forEach((doc) => {
           docs.push({ ...doc.data(), id: doc.id });
         });
-        setChats(docs.slice(0, 3).reverse());
+        setChats(docs.reverse());
       });
   };
   useEffect(() => {

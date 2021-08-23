@@ -1,0 +1,37 @@
+.itemCount {
+display: flex;
+flex-direction: row;
+background-color: #43424233;
+border-radius: 20px;
+padding: 10px;
+margin: 0px 5px;
+justify-content: space-between;
+width: 60%;
+}
+.itemCount p {
+    font-size: 10px !important;
+}
+
+.itemCount input{
+    width: 30px !important;
+    height: 20px !important;
+    padding: 5px !important;
+    text-align: center !important;
+    align-self: center;
+    border: none;
+}
+
+.itemCountButton{
+  text-align: center;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    align-self: center;
+    margin: 0px 5px;
+
+}
+.itemCountButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

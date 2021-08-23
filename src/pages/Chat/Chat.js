@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Chat.css";
 
-import { db } from "../firesbase";
+import { db } from "../../firesbase";
 import firebase from "firebase";
 
 const Chat = ({ width, top, author }) => {
